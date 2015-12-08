@@ -15,6 +15,10 @@
 		6CF5A2C81C16306200E6725E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF5A2C51C16306200E6725E /* FBSDKCoreKit.framework */; };
 		6CF5A2C91C16306200E6725E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF5A2C61C16306200E6725E /* FBSDKLoginKit.framework */; };
 		6CF5A2CA1C16306200E6725E /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF5A2C71C16306200E6725E /* FBSDKShareKit.framework */; };
+		6CF5A2D31C16420100E6725E /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CF5A2CF1C16420100E6725E /* NotoSans-Bold.ttf */; };
+		6CF5A2D41C16420100E6725E /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CF5A2D01C16420100E6725E /* NotoSans-BoldItalic.ttf */; };
+		6CF5A2D51C16420100E6725E /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CF5A2D11C16420100E6725E /* NotoSans-Italic.ttf */; };
+		6CF5A2D61C16420100E6725E /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CF5A2D21C16420100E6725E /* NotoSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		6CF5A2C51C16306200E6725E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "FB-SDK/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		6CF5A2C61C16306200E6725E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "FB-SDK/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		6CF5A2C71C16306200E6725E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "FB-SDK/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		6CF5A2CF1C16420100E6725E /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		6CF5A2D01C16420100E6725E /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		6CF5A2D11C16420100E6725E /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		6CF5A2D21C16420100E6725E /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +71,10 @@
 		6CC4FA0D1C1619530097FFD0 /* FaceTube */ = {
 			isa = PBXGroup;
 			children = (
-				6CC4FA0E1C1619530097FFD0 /* AppDelegate.swift */,
-				6CC4FA101C1619530097FFD0 /* ViewController.swift */,
-				6CC4FA121C1619530097FFD0 /* Main.storyboard */,
-				6CC4FA151C1619530097FFD0 /* Assets.xcassets */,
-				6CC4FA171C1619530097FFD0 /* LaunchScreen.storyboard */,
-				6CC4FA1A1C1619530097FFD0 /* Info.plist */,
+				6CF5A2CB1C16418300E6725E /* Model */,
+				6CF5A2CC1C16418B00E6725E /* View */,
+				6CF5A2CD1C16419300E6725E /* Controller */,
+				6CF5A2CE1C16419800E6725E /* Resources */,
 				6CC4FA201C161BBF0097FFD0 /* FB SDK */,
 			);
 			path = FaceTube;
@@ -82,6 +88,44 @@
 				6CF5A2C71C16306200E6725E /* FBSDKShareKit.framework */,
 			);
 			name = "FB SDK";
+			sourceTree = "<group>";
+		};
+		6CF5A2CB1C16418300E6725E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6CF5A2CC1C16418B00E6725E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6CC4FA121C1619530097FFD0 /* Main.storyboard */,
+				6CC4FA171C1619530097FFD0 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6CF5A2CD1C16419300E6725E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6CC4FA101C1619530097FFD0 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6CF5A2CE1C16419800E6725E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6CC4FA0E1C1619530097FFD0 /* AppDelegate.swift */,
+				6CF5A2CF1C16420100E6725E /* NotoSans-Bold.ttf */,
+				6CF5A2D01C16420100E6725E /* NotoSans-BoldItalic.ttf */,
+				6CF5A2D11C16420100E6725E /* NotoSans-Italic.ttf */,
+				6CF5A2D21C16420100E6725E /* NotoSans-Regular.ttf */,
+				6CC4FA1A1C1619530097FFD0 /* Info.plist */,
+				6CC4FA151C1619530097FFD0 /* Assets.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +186,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CF5A2D31C16420100E6725E /* NotoSans-Bold.ttf in Resources */,
 				6CC4FA191C1619530097FFD0 /* LaunchScreen.storyboard in Resources */,
+				6CF5A2D41C16420100E6725E /* NotoSans-BoldItalic.ttf in Resources */,
+				6CF5A2D51C16420100E6725E /* NotoSans-Italic.ttf in Resources */,
 				6CC4FA161C1619530097FFD0 /* Assets.xcassets in Resources */,
 				6CC4FA141C1619530097FFD0 /* Main.storyboard in Resources */,
+				6CF5A2D61C16420100E6725E /* NotoSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,13 +319,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FaceTube/FB",
-					SDK,
-					"$(PROJECT_DIR)/FaceTube/FB",
-					SDK,
 					"$(PROJECT_DIR)/FaceTube/FB-SDK",
 				);
 				INFOPLIST_FILE = FaceTube/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.ddapps.FaceTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,13 +335,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FaceTube/FB",
-					SDK,
-					"$(PROJECT_DIR)/FaceTube/FB",
-					SDK,
 					"$(PROJECT_DIR)/FaceTube/FB-SDK",
 				);
 				INFOPLIST_FILE = FaceTube/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.ddapps.FaceTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
