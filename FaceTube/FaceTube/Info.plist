@@ -83,5 +83,12 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NotoSans-Bold.ttf</string>
+		<string>NotoSans-BoldItalics.ttf</string>
+		<string>NotoSans-Italics.ttf</string>
+		<string>NotoSans-Regular.ttf</string>
+	</array>
 </dict>
 </plist>
