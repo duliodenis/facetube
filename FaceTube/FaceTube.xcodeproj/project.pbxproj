@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6C574D421C178CD300F75EDA /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C574D411C178CD300F75EDA /* MaterialView.swift */; };
 		6C574D451C178EBF00F75EDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C574D441C178EBF00F75EDA /* Constants.swift */; };
+		6C913D0C1C18A73500A04321 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C913D0B1C18A73500A04321 /* MaterialButton.swift */; };
+		6C913D0E1C18AE3600A04321 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C913D0D1C18AE3600A04321 /* MaterialTextField.swift */; };
 		6CC4FA0F1C1619530097FFD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4FA0E1C1619530097FFD0 /* AppDelegate.swift */; };
 		6CC4FA111C1619530097FFD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4FA101C1619530097FFD0 /* ViewController.swift */; };
 		6CC4FA141C1619530097FFD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CC4FA121C1619530097FFD0 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		6C574D411C178CD300F75EDA /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		6C574D441C178EBF00F75EDA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6C913D0B1C18A73500A04321 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
+		6C913D0D1C18AE3600A04321 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 		6CC4FA0B1C1619530097FFD0 /* FaceTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CC4FA0E1C1619530097FFD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CC4FA101C1619530097FFD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				6CC4FA121C1619530097FFD0 /* Main.storyboard */,
 				6CC4FA171C1619530097FFD0 /* LaunchScreen.storyboard */,
 				6C574D411C178CD300F75EDA /* MaterialView.swift */,
+				6C913D0B1C18A73500A04321 /* MaterialButton.swift */,
+				6C913D0D1C18AE3600A04321 /* MaterialTextField.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -217,10 +223,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C913D0E1C18AE3600A04321 /* MaterialTextField.swift in Sources */,
 				6C574D421C178CD300F75EDA /* MaterialView.swift in Sources */,
 				6CC4FA111C1619530097FFD0 /* ViewController.swift in Sources */,
 				6CC4FA0F1C1619530097FFD0 /* AppDelegate.swift in Sources */,
 				6C574D451C178EBF00F75EDA /* Constants.swift in Sources */,
+				6C913D0C1C18A73500A04321 /* MaterialButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +346,7 @@
 					"$(PROJECT_DIR)/FaceTube/FB-SDK",
 				);
 				INFOPLIST_FILE = FaceTube/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.ddapps.FaceTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,7 +362,7 @@
 					"$(PROJECT_DIR)/FaceTube/FB-SDK",
 				);
 				INFOPLIST_FILE = FaceTube/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.ddapps.FaceTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
