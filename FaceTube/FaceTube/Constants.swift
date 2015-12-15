@@ -9,5 +9,17 @@
 import Foundation
 import UIKit
 
+// MARK: Colors
+
 let SHADOW_COLOR: CGFloat = 157.0 / 255.0
 let BUTTON_SHADOW_COLOR: CGFloat = 90.0 / 255.0
+
+
+// MARK: User Default Keys
+
+let KEY_UID = "uid"
+
+
+// MARK: Segues
+
+let SEGUE_LOGGED_IN = "LoggedIn"
