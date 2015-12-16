@@ -11,7 +11,11 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
 
+    
     // MARK: View Lifecycle
     
     override func viewDidLoad() {
@@ -53,6 +57,34 @@ class ViewController: UIViewController {
                 })
             }
         }        
+    }
+    
+    
+    // MARK: Email Login
+    
+    @IBAction func loginAttempt(sender: UIButton!) {
+        if let email = emailField.text where email != "",
+           let password = passwordField.text where password != "" {
+            
+            DataService.ds.REF_BASE.authUser(email, password: password, withCompletionBlock: { error, authData in
+                if error != nil {
+                    print(error)
+                }
+            })
+            
+        } else {
+            showErrorAlert("Login Attempt", message: "You need to enter both an email and password to login.")
+        }
+    }
+    
+    
+    // MARK: Alert function
+    
+    func showErrorAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
     }
 
 }
