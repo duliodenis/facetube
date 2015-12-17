@@ -69,6 +69,19 @@ class ViewController: UIViewController {
             DataService.ds.REF_BASE.authUser(email, password: password, withCompletionBlock: { error, authData in
                 if error != nil {
                     print(error)
+                    
+                    if error.code == STATUS_ACCOUNT_NONEXIST {
+                        DataService.ds.REF_BASE.createUser(email, password: password, withValueCompletionBlock: { error, result  in
+                            
+                            if error != nil {
+                                self.showErrorAlert("Could not create account", message: "Problem creating account")
+                            } else {
+                                NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
+                                DataService.ds.REF_BASE.authUser(email, password: password, withCompletionBlock: nil)
+                                self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                            }
+                        })
+                    }
                 }
             })
             

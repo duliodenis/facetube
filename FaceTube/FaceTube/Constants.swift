@@ -23,3 +23,8 @@ let KEY_UID = "uid"
 // MARK: Segues
 
 let SEGUE_LOGGED_IN = "LoggedIn"
+
+
+// MARK: Status Codes
+
+let STATUS_ACCOUNT_NONEXIST = -8
