@@ -48,12 +48,12 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1526951527618603</string>
+				<string>fbFB_APP_ID</string>
 			</array>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>1526951527618603</string>
+	<string>FB_APP_ID</string>
 	<key>FacebookDisplayName</key>
 	<string>FTube</string>
 	<key>NSAppTransportSecurity</key>

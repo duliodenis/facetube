@@ -81,7 +81,11 @@ class ViewController: UIViewController {
                                 self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                             }
                         })
+                    } else { // All other error's besides Nonexistent account
+                        self.showErrorAlert("Could not login", message: "Please check your user name or password.")
                     }
+                } else {
+                    self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                 }
             })
             
