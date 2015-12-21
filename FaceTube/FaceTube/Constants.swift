@@ -28,3 +28,8 @@ let SEGUE_LOGGED_IN = "LoggedIn"
 // MARK: Status Codes
 
 let STATUS_ACCOUNT_NONEXIST = -8
+
+
+// MARK: Reuse Identifiers
+
+let RI_PostCell = "PostCell"
