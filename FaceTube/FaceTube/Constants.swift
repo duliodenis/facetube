@@ -33,3 +33,8 @@ let STATUS_ACCOUNT_NONEXIST = -8
 // MARK: Reuse Identifiers
 
 let RI_PostCell = "PostCell"
+
+
+// MARK: URL Constants
+
+let URL_BASE = "https://facetube.firebaseio.com"
