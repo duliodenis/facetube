@@ -10,6 +10,7 @@
 		12DD0C1E4952A6F28BA06CDE /* Pods_FaceTube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A2AC75BA973F0277DC9467 /* Pods_FaceTube.framework */; };
 		6C574D421C178CD300F75EDA /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C574D411C178CD300F75EDA /* MaterialView.swift */; };
 		6C574D451C178EBF00F75EDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C574D441C178EBF00F75EDA /* Constants.swift */; };
+		6C724EF91C2C3D890085910E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C724EF81C2C3D890085910E /* Post.swift */; };
 		6C7E68631C289E9500E9A5E8 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E68621C289E9500E9A5E8 /* FeedVC.swift */; };
 		6C7E68651C28A02D00E9A5E8 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E68641C28A02D00E9A5E8 /* PostCell.swift */; };
 		6C913D0C1C18A73500A04321 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C913D0B1C18A73500A04321 /* MaterialButton.swift */; };
@@ -34,6 +35,7 @@
 		54A2AC75BA973F0277DC9467 /* Pods_FaceTube.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceTube.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C574D411C178CD300F75EDA /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		6C574D441C178EBF00F75EDA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6C724EF81C2C3D890085910E /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		6C7E68621C289E9500E9A5E8 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		6C7E68641C28A02D00E9A5E8 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		6C913D0B1C18A73500A04321 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		6CF5A2CB1C16418300E6725E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6C724EF81C2C3D890085910E /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				6CC4FA0F1C1619530097FFD0 /* AppDelegate.swift in Sources */,
 				6C574D451C178EBF00F75EDA /* Constants.swift in Sources */,
 				6C913D0C1C18A73500A04321 /* MaterialButton.swift in Sources */,
+				6C724EF91C2C3D890085910E /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
