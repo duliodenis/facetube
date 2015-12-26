@@ -23,6 +23,8 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.estimatedRowHeight = 380
+        
         DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
             self.posts = []
             
@@ -73,4 +75,14 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let post = posts[indexPath.row]
+        
+        if post.imageURL == nil {
+            return 150
+        } else {
+            return tableView.estimatedRowHeight
+        }
+    }
 }

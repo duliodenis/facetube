@@ -222,7 +222,7 @@
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="380" id="yGw-II-rBx" customClass="PostCell" customModule="FaceTube" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" id="yGw-II-rBx" customClass="PostCell" customModule="FaceTube" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="560" height="380"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yGw-II-rBx" id="gln-IK-CJT">
