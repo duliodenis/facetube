@@ -12,8 +12,10 @@
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
         </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
@@ -72,7 +74,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook-icon" translatesAutoresizingMaskIntoConstraints="NO" id="eUY-nm-UwB">
                                                 <rect key="frame" x="0.0" y="22" width="65" height="65"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4Q-x2-uIt" customClass="MaterialButton" customModule="FaceTube" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4Q-x2-uIt" customClass="MaterialButton" customModule="FaceTube" customModuleProvider="target">
                                                 <rect key="frame" x="105" y="38" width="415" height="33"/>
                                                 <color key="backgroundColor" red="0.11764705882352941" green="0.54509803921568623" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
@@ -220,9 +222,51 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBj-b8-3ue" customClass="MaterialView" customModule="FaceTube" customModuleProvider="target">
                                 <rect key="frame" x="20" y="72" width="560" height="55"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vad-HP-2Xe">
+                                        <rect key="frame" x="8" y="8" width="544" height="39"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Talk about your face" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kap-Yj-3OQ" customClass="MaterialTextField" customModule="FaceTube" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="437" height="39"/>
+                                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="woD-1M-Kxy">
+                                                <rect key="frame" x="447" y="0.0" width="37" height="39"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="37" id="W1I-46-idX"/>
+                                                    <constraint firstAttribute="height" constant="37" id="wdg-9d-ZfM"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="GjC-sW-ilx" appends="YES" id="8X8-kd-efr"/>
+                                                </connections>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DS-ad-w5D" customClass="MaterialButton" customModule="FaceTube" customModuleProvider="target">
+                                                <rect key="frame" x="494" y="0.0" width="50" height="39"/>
+                                                <color key="backgroundColor" red="0.0" green="0.70588235294117641" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="4Su-7K-Y2M"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="14"/>
+                                                <state key="normal" title="POST">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="makePost:" destination="SGw-2j-jFx" eventType="touchUpInside" id="1An-a4-flq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="vad-HP-2Xe" secondAttribute="trailing" id="NCN-HS-LSb"/>
+                                    <constraint firstItem="vad-HP-2Xe" firstAttribute="top" secondItem="WBj-b8-3ue" secondAttribute="topMargin" id="Nlq-ia-Iwg"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="vad-HP-2Xe" secondAttribute="bottom" id="X7Z-Ek-QVl"/>
                                     <constraint firstAttribute="height" constant="55" id="sMm-Zm-Gjb"/>
+                                    <constraint firstItem="vad-HP-2Xe" firstAttribute="leading" secondItem="WBj-b8-3ue" secondAttribute="leadingMargin" id="u3n-mO-RvU"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="380" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hti-1A-GEK">
@@ -348,10 +392,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="LqU-fB-USW"/>
                     <connections>
+                        <outlet property="imageSelectorImage" destination="woD-1M-Kxy" id="iEF-xq-rxg"/>
+                        <outlet property="postField" destination="kap-Yj-3OQ" id="JTF-dT-iel"/>
                         <outlet property="tableView" destination="hti-1A-GEK" id="hm2-G7-PbP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5KJ-NV-9lD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GjC-sW-ilx">
+                    <connections>
+                        <action selector="selectImage:" destination="SGw-2j-jFx" id="RKH-Cu-EXr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2089" y="429"/>
         </scene>
@@ -376,6 +427,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" width="48" height="48"/>
         <image name="facebook-icon" width="65" height="65"/>
         <image name="heart-empty" width="150" height="147"/>
         <image name="profile" width="100" height="100"/>
