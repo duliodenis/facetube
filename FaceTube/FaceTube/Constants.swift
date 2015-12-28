@@ -38,3 +38,8 @@ let RI_PostCell = "PostCell"
 // MARK: URL Constants
 
 let URL_BASE = "https://facetube.firebaseio.com"
+
+
+// MARK: API Keys
+
+let APIKEY_imageShack = "YOUR_IMAGESHACK_API_KEY"
