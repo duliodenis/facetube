@@ -50,6 +50,8 @@ class PostCell: UITableViewCell {
                         self.showcaseImage.image = image
                         // Cache the image for performance
                         FeedVC.imageCache.setObject(image, forKey:self.post.imageURL!)
+                    } else {
+                        print(error.debugDescription)
                     }
                 })
             }
