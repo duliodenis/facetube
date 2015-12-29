@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-
+import Firebase
 
 class PostCell: UITableViewCell {
     
@@ -16,12 +16,21 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var showcaseImage: UIImageView!
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var likeImage: UIImageView!
     
     var post: Post!
     var request: Request?
     
+    var likeReference: Firebase!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        // add a one tap gesture recognizer on the like image
+        let tap = UITapGestureRecognizer(target: self, action: "likeTapped:")
+        tap.numberOfTapsRequired = 1
+        likeImage.addGestureRecognizer(tap)
+        likeImage.userInteractionEnabled = true
     }
     
     
@@ -34,6 +43,9 @@ class PostCell: UITableViewCell {
     
     func configureCell(post: Post, image: UIImage?) {
         self.post = post
+        
+        likeReference = DataService.ds.REF_CURRENT_USER.childByAppendingPath("likes").childByAppendingPath(post.postKey)
+        
         self.descriptionText.text = post.postDescription
         self.likesLabel.text = "\(post.likes)"
         
@@ -58,5 +70,36 @@ class PostCell: UITableViewCell {
         } else {                // there is no URL at all.
             self.showcaseImage.hidden = true
         }
+        
+        likeReference.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            if let doesNotExist = snapshot.value as? NSNull {
+                // This user has not liked this post
+                self.likeImage.image = UIImage(named: "heart-empty")
+            } else {
+                // This user has liked this post already
+                self.likeImage.image = UIImage(named: "heart-full")
+            }
+        })
+    }
+    
+    
+    // MARK: Tap Gesture Recognizer function
+    func likeTapped(sender: UITapGestureRecognizer) {
+        likeReference.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            if let doesNotExist = snapshot.value as? NSNull {
+                // This user has not liked this post - then like it
+                self.likeImage.image = UIImage(named: "heart-full")
+                self.post.updateLikes(true)
+                self.likeReference.setValue(true)
+                
+            } else {
+                // This user has liked this post already - unlike it
+                self.likeImage.image = UIImage(named: "heart-empty")
+                self.post.updateLikes(false)
+                self.likeReference.removeValue()
+            }
+        })
     }
 }

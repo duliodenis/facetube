@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class Post {
     private var _postDescription: String!
@@ -14,6 +15,8 @@ class Post {
     private var _likes: Int!
     private var _username: String!
     private var _postKey: String!
+    
+    private var _postReference: Firebase!
     
     var postDescription: String {
         return _postDescription
@@ -31,8 +34,12 @@ class Post {
         return _username
     }
     
+    var postKey: String {
+        return _postKey
+    }
     
-    // Initializer used when we create a post
+    
+    // MARK: Initializer used when we create a post
     
     init(description: String, imageURL: String?, username: String) {
         self._postDescription = description
@@ -41,7 +48,7 @@ class Post {
     }
     
     
-    // Initializer used to convert data we get from Firebase
+    // MARK: Initializer used to convert data we get from Firebase
     
     init(postKey: String, dictionary: Dictionary<String, AnyObject>) {
         self._postKey = postKey
@@ -57,5 +64,20 @@ class Post {
         if let description = dictionary["description"] as? String {
             self._postDescription = description
         }
+        
+        self._postReference = DataService.ds.REF_POSTS.childByAppendingPath(self._postKey)
+    }
+    
+    
+    // MARK: Like Updater
+    
+    func updateLikes(addLike: Bool) {
+        if addLike {
+            _likes = _likes + 1
+        } else {
+            _likes = _likes - 1
+        }
+        
+        _postReference.childByAppendingPath("likes").setValue(_likes)
     }
 }

@@ -74,7 +74,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook-icon" translatesAutoresizingMaskIntoConstraints="NO" id="eUY-nm-UwB">
                                                 <rect key="frame" x="0.0" y="22" width="65" height="65"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4Q-x2-uIt" customClass="MaterialButton" customModule="FaceTube" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4Q-x2-uIt" customClass="MaterialButton" customModule="FaceTube" customModuleProvider="target">
                                                 <rect key="frame" x="105" y="38" width="415" height="33"/>
                                                 <color key="backgroundColor" red="0.11764705882352941" green="0.54509803921568623" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
@@ -296,29 +296,41 @@
                                                                                 <constraint firstAttribute="height" constant="50" id="RjQ-HS-7fW"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOSNinjaRockstar1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Zvv-bX-WI8">
-                                                                            <rect key="frame" x="50" y="13" width="304" height="24"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOSNinjaRockstar1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zvv-bX-WI8">
+                                                                            <rect key="frame" x="50" y="13" width="344" height="24"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="344" id="ERo-bE-KT4"/>
+                                                                            </constraints>
                                                                             <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                                                             <color key="textColor" red="0.95686274510000002" green="0.31764705879999999" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="R3X-V2-Ms2">
-                                                                            <rect key="frame" x="354" y="0.0" width="150" height="50"/>
+                                                                            <rect key="frame" x="394" y="0.0" width="50" height="50"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="150" id="JOO-6f-8gC"/>
+                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="86D-Z4-DUJ"/>
+                                                                                <constraint firstAttribute="width" constant="50" id="JOO-6f-8gC"/>
                                                                             </constraints>
+                                                                            <variation key="default">
+                                                                                <mask key="constraints">
+                                                                                    <exclude reference="86D-Z4-DUJ"/>
+                                                                                </mask>
+                                                                            </variation>
                                                                         </imageView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lcz-IF-Bes">
-                                                                            <rect key="frame" x="504" y="1" width="40" height="48"/>
+                                                                            <rect key="frame" x="444" y="1" width="100" height="48"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A41-mN-ecy">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="24"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="100" id="d7t-wQ-wf3"/>
+                                                                                    </constraints>
                                                                                     <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUx-b7-fBr">
-                                                                                    <rect key="frame" x="0.0" y="24" width="40" height="24"/>
+                                                                                    <rect key="frame" x="0.0" y="24" width="100" height="24"/>
                                                                                     <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <nil key="highlightedColor"/>
@@ -365,6 +377,7 @@
                                         <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="descriptionText" destination="92r-NM-DZV" id="hDN-dk-w4n"/>
+                                            <outlet property="likeImage" destination="R3X-V2-Ms2" id="WJR-Bh-6w7"/>
                                             <outlet property="likesLabel" destination="A41-mN-ecy" id="7Hx-Qh-dIc"/>
                                             <outlet property="profileImage" destination="cbg-5o-1I4" id="dtl-dU-iU7"/>
                                             <outlet property="showcaseImage" destination="3Em-Uf-v4K" id="0uc-p8-FtI"/>

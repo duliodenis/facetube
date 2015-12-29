@@ -32,6 +32,11 @@ class DataService {
         return _REF_USERS
     }
     
+    var REF_CURRENT_USER: Firebase {
+        let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) as! String
+        return Firebase(url: "\(URL_BASE)").childByAppendingPath("users").childByAppendingPath(uid)
+    }
+    
     
     // MARK: User Creation
     
